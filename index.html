@@ -2,463 +2,540 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Maahad Ummil Banat — Online Qur'an and Islamic learning for sisters and girls.">
-  <title>Maahad Ummil Banat | Islamic Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maahad Ummil Banat - Online Quran, Arabic and Islamic learning for girls and women.">
+<title>Maahad Ummil Banat | Islamic Learning</title>
 
-  <style>
-    :root {
-      --green: #174c3c;
-      --deep: #10372c;
-      --gold: #c7a45b;
-      --cream: #fbf8ef;
-      --white: #ffffff;
-      --text: #26352e;
-      --muted: #66736b;
-    }
+<style>
+:root {
+  --green: #145c43;
+  --dark: #0b382b;
+  --gold: #c9a44c;
+  --cream: #fbf8ef;
+  --white: #ffffff;
+  --text: #304239;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.7;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
 
-    a {
-      text-decoration: none;
-    }
+a {
+  text-decoration: none;
+}
 
-    .topbar {
-      background: var(--deep);
-      color: white;
-      text-align: center;
-      padding: 9px 14px;
-      font-size: 13px;
-    }
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: auto;
+}
 
-    header {
-      background: white;
-      border-bottom: 1px solid #e8e1d2;
-    }
+header {
+  background: white;
+  border-bottom: 3px solid var(--gold);
+}
 
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 17px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+nav {
+  min-height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
 
-    .brand {
-      color: var(--green);
-      font-size: 21px;
-      font-weight: 800;
-      line-height: 1.3;
-    }
+.logo {
+  color: var(--green);
+  font-size: 21px;
+  font-weight: bold;
+}
 
-    .brand span {
-      display: block;
-      color: #98752e;
-      font-size: 11px;
-      letter-spacing: 2px;
-    }
+.logo small {
+  display: block;
+  color: #92752f;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
 
-    .nav-links a {
-      color: var(--text);
-      font-size: 14px;
-      font-weight: bold;
-    }
+.nav-links a {
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: bold;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #10372c, #28664d);
-      color: white;
-      padding: 85px 22px;
-      text-align: center;
-    }
+.nav-links a:hover {
+  color: var(--gold);
+}
 
-    .hero-inner {
-      max-width: 800px;
-      margin: auto;
-    }
+.hero {
+  background: linear-gradient(135deg, #0b382b, #1b7050);
+  color: white;
+  padding: 90px 0;
+  text-align: center;
+}
 
-    .eyebrow {
-      color: #e6cd91;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+.arabic {
+  color: #f0d68d;
+  font-size: 35px;
+  margin-bottom: 10px;
+  direction: rtl;
+}
 
-    h1 {
-      font-size: clamp(34px, 6vw, 57px);
-      line-height: 1.15;
-      margin-bottom: 22px;
-    }
+.eyebrow {
+  color: #e5c779;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-    .hero p {
-      max-width: 660px;
-      margin: 0 auto 28px;
-      color: #edf4ef;
-      font-size: 17px;
-    }
+.hero h1 {
+  font-size: clamp(34px, 6vw, 56px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
 
-    .button {
-      display: inline-block;
-      background: var(--gold);
-      color: #182a20;
-      padding: 13px 23px;
-      border-radius: 6px;
-      font-weight: bold;
-      margin: 5px;
-    }
+.hero p.description {
+  max-width: 680px;
+  margin: 0 auto 25px;
+  color: #e4eee8;
+  font-size: 17px;
+}
 
-    .button-outline {
-      display: inline-block;
-      border: 1px solid #e5d6ae;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 6px;
-      margin: 5px;
-      font-weight: bold;
-    }
-  </style>
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.btn-outline {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+section {
+  padding: 70px 0;
+  scroll-margin-top: 20px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading .eyebrow {
+  color: #98762d;
+}
+
+.section-heading h2 {
+  color: var(--green);
+  font-size: 31px;
+  line-height: 1.3;
+}
+
+.section-heading p {
+  max-width: 650px;
+  margin: 12px auto 0;
+  color: #65746b;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.about-panel {
+  background: var(--green);
+  color: white;
+  border-radius: 12px;
+  padding: 35px;
+  text-align: center;
+}
+
+.about-panel .symbol {
+  font-size: 70px;
+  color: #e5c779;
+}
+
+.about-panel h3 {
+  color: #f0d68d;
+  margin-bottom: 10px;
+}
+
+.about-text h3 {
+  color: var(--green);
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.about-text p {
+  margin-bottom: 12px;
+  color: #52645a;
+}
+
+.features {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.features li {
+  margin: 8px 0;
+}
+
+.features li::before {
+  content: "✓ ";
+  color: var(--green);
+  font-weight: bold;
+}
+
+.courses {
+  background: #f1eddf;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.course-card {
+  background: white;
+  padding: 26px 23px;
+  border-radius: 10px;
+  border-bottom: 4px solid var(--gold);
+  box-shadow: 0 5px 20px rgba(20, 60, 40, 0.06);
+}
+
+.course-icon {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.course-card h3 {
+  color: var(--green);
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #65736b;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  .hero {
+    padding: 65px 0;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .about-grid,
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <div class="topbar">
-    Online Qur'an and Islamic Learning for Sisters and Girls
-  </div>
 
-  <header>
-    <nav class="nav">
-      <a class="brand" href="#home">
-        MAAHAD UMMIL BANAT
-        <span>KNOWLEDGE • FAITH • CHARACTER</span>
-      </a>
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">
+      Maahad Ummil Banat
+      <small>ISLAMIC LEARNING CENTRE</small>
+    </a>
 
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#courses">Courses</a>
-        <a href="#admission">Admission</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <div class="eyebrow">Welcome to Our Learning Community</div>
-
-        <h1>Learn the Qur'an. Strengthen Your Faith.</h1>
-
-        <p>
-          Welcome to Maahad Ummil Banat, a learning community dedicated
-          to helping sisters and girls develop their Qur'an reading,
-          Islamic knowledge, and love for lifelong learning.
-        </p>
-
-        <a class="button"
-           href="https://wa.me/2349043117378"
-           target="_blank" rel="noopener">
-          Enquire About Classes
-        </a>
-
-        <a class="button-outline" href="#courses">
-          Explore Our Courses
-        </a>
-      </div>
-    </section>
-
-      <article class="about-panel">
-        <h3>Qur'an Reading</h3>
-        <p>Learn to read the Holy Qur'an correctly, step by step, with guidance and practice.</p>
-      </article>
-
-      <article class="about-panel">
-        <h3>Tajweed</h3>
-        <p>Improve your Qur'an recitation by learning the basic rules of Tajweed.</p>
-      </article>
-
-      <article class="about-panel">
-        <h3>Memorisation</h3>
-        <p>Build a steady Qur'an memorisation routine with regular revision.</p>
-      </article>
-
-      <article class="about-panel">
-        <h3>Islamic Studies</h3>
-        <p>Learn essential Islamic knowledge, manners, and daily practices.</p>
-      </article>
-
-      <article class="about-panel">
-        <h3>Arabic Basics</h3>
-        <p>Begin learning Arabic letters, words, and simple reading skills.</p>
-      </article>
-
-      <article class="about-panel">
-        <h3>Personal Guidance</h3>
-        <p>Discuss your learning goals so we can guide you toward a suitable class.</p>
-      </article>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#admission">Admission</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <p class="arabic" lang="ar">معهد أم البنات</p>
+    <p class="eyebrow">Knowledge • Faith • Excellence</p>
+
+    <h1>Welcome to Maahad Ummil Banat</h1>
+
+    <p class="description">
+      A welcoming place for girls and women to learn the Holy Quran,
+      improve their recitation, study Arabic and grow in Islamic knowledge.
+    </p>
+
+    <a class="btn btn-gold" href="#courses">Explore Our Courses</a>
+    <a class="btn btn-outline" href="#admission">Enrol Now</a>
   </div>
 </section>
 
-<section id="classes">
+<section id="about">
   <div class="container">
     <div class="section-heading">
-      <div class="eyebrow">Learn With Us</div>
-      <h2>Online Classes for Sisters and Girls</h2>
-      <p>Learn from home in a supportive environment. Contact us to ask about class schedules and fees.</p>
+      <p class="eyebrow">Who We Are</p>
+      <h2>About Our Institute</h2>
+      <p>
+        Supporting students in their journey towards beneficial knowledge
+        and a stronger understanding of Islam.
+      </p>
     </div>
 
     <div class="about-grid">
       <div class="about-panel">
-        <h3>Flexible Online Learning</h3>
-        <p>Our online learning approach is designed to help students study from the comfort of their homes.</p>
-        <p>Lessons can be discussed according to the student's learning needs and available schedule.</p>
-        <a class="button" href="https://wa.me/2349043117378?text=Assalamu%20Alaikum%2C%20I%20would%20like%20to%20ask%20about%20online%20classes." target="_blank" rel="noopener">Ask About Classes</a>
+        <div class="symbol">۞</div>
+        <h3>Learn With Purpose</h3>
+        <p>
+          Building knowledge, good character and a lasting connection
+          with the Holy Quran.
+        </p>
       </div>
 
-      <div class="about-panel">
-        <h3>How to Join</h3>
-        <div class="feature">1. Contact us on WhatsApp.</div>
-        <div class="feature">2. Tell us which subject you want to study.</div>
-        <div class="feature">3. Ask about available times and fees.</div>
-        <div class="feature">4. Confirm your class arrangements before starting.</div>
+      <div class="about-text">
+        <h3>Our Mission</h3>
+        <p>
+          Maahad Ummil Banat aims to provide accessible Islamic learning
+          opportunities for girls and women in a supportive environment.
+        </p>
+        <p>
+          Our learning areas include Quran reading, Tajweed, Arabic
+          and foundational Islamic studies.
+        </p>
+
+        <ul class="features">
+          <li>Online learning opportunities</li>
+          <li>Structured lessons for students</li>
+          <li>Quran and Islamic education</li>
+          <li>A welcoming learning environment</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
+
+<section class="courses" id="courses">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">What You Can Learn</p>
+      <h2>Our Courses</h2>
+      <p>
+        Discover our learning areas and contact us for information
+        about available classes and registration.
+      </p>
+    </div>
+
+    <div class="course-grid">
+      <article class="course-card">
+        <div class="course-icon">📖</div>
+        <h3>Quran Reading</h3>
+        <p>
+          Learn to read the Holy Quran and improve your reading
+          accuracy through guided lessons.
+        </p>
+      </article>
+
+      <article class="course-card">
+        <div class="course-icon">🌙</div>
+        <h3>Tajweed</h3>
+        <p>
+          Study the rules of Quranic recitation and work towards
+          clearer and more accurate pronunciation.
+        </p>
+      </article>
+
+      <article class="course-card">
+        <div class="course-icon">🕌</div>
+        <h3>Islamic Studies</h3>
+        <p>
+          Learn essential Islamic knowledge, worship and good
+          character through structured lessons.
+        </p>
+      </article>
+
+      <article class="course-card">
+        <div class="course-icon">🔤</div>
+        <h3>Arabic Language</h3>
+        <p>
+          Develop your Arabic reading skills and build a foundation
+          for understanding Arabic words and sentences.
+        </p>
+      </article>
+
+      <article class="course-card">
+        <div class="course-icon">📚</div>
+        <h3>Quran Memorisation</h3>
+        <p>
+          Work towards memorising selected portions of the Holy Quran
+          with regular revision.
+        </p>
+      </article>
+
+      <article class="course-card">
+        <div class="course-icon">🌸</div>
+        <h3>Learning for Women</h3>
+        <p>
+          Explore Islamic learning opportunities designed for girls
+          and women. Contact us for class details.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+</body>
+</html>
 
 <section id="admission">
   <div class="container">
     <div class="section-heading">
-      <div class="eyebrow">Admissions</div>
-      <h2>Start Your Learning Journey</h2>
-      <p>We welcome enquiries from students who want to improve their Qur'an reading and Islamic knowledge.</p>
+      <p class="eyebrow">Join Our Institute</p>
+      <h2>Admission & Registration</h2>
+      <p>
+        Take the next step in your Islamic learning journey.
+        Contact us to ask about classes, schedules and fees.
+      </p>
     </div>
 
-    <div style="text-align:center">
-      <a class="button" href="https://wa.me/2349043117378?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20joining%20Maahad%20Ummil%20Banat." target="_blank" rel="noopener">Enquire About Admission</a>
+    <div class="admission-box">
+      <h3>How to Register</h3>
+      <ol class="steps">
+        <li>Contact Maahad Ummil Banat through WhatsApp.</li>
+        <li>Tell us which course you wish to study.</li>
+        <li>Ask about available class times and monthly fees.</li>
+        <li>Complete your registration after receiving instructions.</li>
+      </ol>
+
+      <p>
+        We look forward to welcoming you to our learning community.
+      </p>
+
+      <p style="text-align:center; margin-top:20px;">
+        <a
+          class="btn btn-gold"
+          href="https://wa.me/2349043117378?text=Assalamu%20alaikum.%20I%20would%20like%20to%20register%20at%20Maahad%20Ummil%20Banat."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Register on WhatsApp
+        </a>
+      </p>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section class="contact" id="contact">
   <div class="container">
     <div class="section-heading">
-      <div class="eyebrow">Contact Us</div>
-      <h2>We Would Love to Hear From You</h2>
-      <p>Have a question about lessons, schedules, or fees? Send us a message.</p>
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Contact Us</h2>
+      <p>
+        Have a question about our courses or registration?
+        We would be happy to hear from you.
+      </p>
     </div>
 
-    <div class="about-panel" style="text-align:center">
-      <h3>Maahad Ummil Banat</h3>
-      <p>Online Qur'an and Islamic learning.</p>
-      <p>WhatsApp: +234 904 311 7378</p>
-      <a class="button" href="https://wa.me/2349043117378" target="_blank" rel="noopener">Chat With Us on WhatsApp</a>
+    <div class="contact-details">
+      <p><strong>Institute:</strong> Maahad Ummil Banat</p>
+      <p>
+        <strong>WhatsApp:</strong>
+        <a href="https://wa.me/2349043117378"
+           target="_blank" rel="noopener noreferrer">
+          +234 904 311 7378
+        </a>
+      </p>
+
+      <p>
+        Send us a message to ask about course availability,
+        lesson schedules and registration.
+      </p>
+
+      <a
+        class="btn btn-gold"
+        href="https://wa.me/2349043117378?text=Assalamu%20alaikum.%20I%20would%20like%20more%20information%20about%20Maahad%20Ummil%20Banat."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Message Us
+      </a>
     </div>
   </div>
 </section>
 
-<footer style="background:#10372c;color:#fff;text-align:center;padding:25px 18px">
-  <p><strong>Maahad Ummil Banat</strong></p>
-  <p style="font-size:13px;color:#e4e9e4">Knowledge, Faith, and Good Character.</p>
-  <p style="font-size:12px;margin-top:10px">© 2026 Maahad Ummil Banat. All rights reserved.</p>
+</main>
+
+<footer>
+  <p>
+    &copy; <span id="year">2026</span> Maahad Ummil Banat.
+    All rights reserved.
+  </p>
+  <p>Knowledge • Faith • Excellence</p>
 </footer>
 
-<style>
-  @media (max-width: 700px) {
-    .nav {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .nav-links {
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .hero {
-      padding: 58px 18px;
-    }
-
-    section {
-      padding: 48px 18px;
-    }
-
-    .about-grid,
-    .course-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-</body>
-</html>
-
-        <div class="about-panel">
-          <h3>Our Learning Approach</h3>
-          <p>
-            We encourage students to learn at a steady pace, ask questions,
-            and practise regularly as they develop their skills.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="courses" id="courses">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Our Courses</div>
-        <h2>Explore What You Can Learn</h2>
-        <p>
-          Contact us to discuss your learning goals, suitable classes,
-          available schedules, and fees.
-        </p>
-      </div>
-
-      <div class="course-grid">
-        <article class="course-card">
-          <div class="course-icon">📖</div>
-          <h3>Qur'an Reading</h3>
-          <p>
-            Develop your Qur'an reading skills through guided lessons
-            and regular practice.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <div class="course-icon">🌙</div>
-          <h3>Tajweed</h3>
-          <p>
-            Learn the basic rules of Tajweed to improve the accuracy
-            and quality of your recitation.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <div class="course-icon">✨</div>
-          <h3>Qur'an Memorisation</h3>
-          <p>
-            Build a memorisation routine with revision and guidance
-            to support steady progress.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <div class="course-icon">🕌</div>
-          <h3>Islamic Studies</h3>
-          <p>
-            Explore essential Islamic knowledge, worship, manners,
-            and everyday Muslim practices.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <div class="course-icon">🔤</div>
-          <h3>Arabic Basics</h3>
-          <p>
-            Start with Arabic letters, pronunciation, and basic
-            reading skills.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <div class="course-icon">🌿</div>
-          <h3>Learning Support</h3>
-          <p>
-            Discuss your current level and learning goals so we can
-            talk about a suitable learning plan.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="admission">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Admissions</div>
-        <h2>Begin Your Learning Journey</h2>
-        <p>
-          Interested in joining Maahad Ummil Banat? Send us a message
-          to ask about classes and registration.
-        </p>
-      </div>
-
-      <div class="admission-box">
-        <h3>We Welcome Your Enquiry</h3>
-        <p>
-          Tell us which subject you would like to study. We can discuss
-          class availability, lesson times, and fees before you begin.
-        </p>
-
-        <a class="button"
-           href="https://wa.me/2349043117378?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20joining%20Maahad%20Ummil%20Banat."
-           target="_blank" rel="noopener">
-          Ask About Admission
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Get in Touch</div>
-        <h2>We Would Love to Hear From You</h2>
-        <p>
-          Have questions about our learning programmes? Contact us
-          through WhatsApp.
-        </p>
-      </div>
-
-      <div class="contact-card">
-        <h3>Maahad Ummil Banat</h3>
-        <p>Online Qur'an and Islamic learning.</p>
-        <p>WhatsApp: +234 904 311 7378</p>
-
-        <a class="button"
-           href="https://wa.me/2349043117378"
-           target="_blank" rel="noopener">
-          Chat With Us on WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-  </main>
-
-  <footer>
-    <p><strong>Maahad Ummil Banat</strong></p>
-    <p>Knowledge, Faith, and Good Character.</p>
-    <p class="small">
-      © 2026 Maahad Ummil Banat. All rights reserved.
-    </p>
-  </footer>
+<a
+  class="whatsapp-float"
+  href="https://wa.me/2349043117378"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contact Maahad Ummil Banat on WhatsApp"
+>
+  WhatsApp
+</a>
 
 </body>
 </html>
-
